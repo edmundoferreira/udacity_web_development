@@ -1,0 +1,45 @@
+{%  extends "base.html" %}
+
+
+{% block log %}
+	{% if logname==None: %}
+		<div class="edit-area">
+			<a class="edit-link" href="{{url}}">view</a>
+		</div>
+		<div class="login-area">
+			<a class="login-link" href="/login">login</a>
+	  		|    
+			<a class="login-link" href="/signup">signup</a>
+		</div>
+		{% else: %}
+		<div class="edit-area">
+			<a class="edit-link" href="/_edit{{url}}">edit</a>
+			|
+			<a class="edit-link" href="{{url}}">view</a>
+		</div>
+		<div class="login-area">
+			{{logname}} (<a class="login-link" href="/logout">logout</a>)
+		</div>
+	{% endif %}
+{% endblock %}
+
+
+{% block page %}
+	<table  class="tablehistory">
+		<tbody>
+			{% for i in range(0,wikipg.count()) %}
+				<tr>
+					<td class="created-cell">{{wikipg[i].created.strftime("%a %b %d %H:%M:%S %Y")}}</td>
+					<td class="content-cell">{{wikipg[i].pagecontent[0:100]}}</td>
+					<td><a class="history-link" href="{{url}}?v={{i}}">view</a></td>
+					{% if not logname==None: %}
+						<td><a class="history-link" href="/_edit{{url}}?v={{i}}">edit</a> </td>
+					{% endif %}
+					</form>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
+{% endblock %}
+

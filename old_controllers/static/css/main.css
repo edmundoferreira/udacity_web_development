@@ -1,0 +1,132 @@
+body {
+    position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+}
+
+.created-cell{
+	font-weight:bold;
+}
+
+.content-cell{
+	padding-left:20px;
+	width: 620px;
+	padding-right:5px;
+}
+
+.tablehistory{
+	border-collapse: collapse;
+}
+
+.tablehistory td{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.tablehistory tr{
+	height:30px;
+}
+
+
+.tablehistory tr:nth-of-type(2n){
+	background-color: #E9E9E9;
+}
+
+
+.login-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.edit-area {
+    font-size: 13px;
+    color: gray;
+    position: absolute;
+    top: 15px;
+    right: 180px;
+}
+
+.edit-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.history-link{
+	color:gray;
+	text-decoration:none;
+	margin-left: 5px;
+}
+
+.login-link {
+    color: gray;
+    text-decoration: none;
+}
+
+.login-link:visited {
+    color: gray;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.error {
+    color: red;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+}
+
+label + label {
+    margin-top: 20px;
+}
+
+input[type=text] {
+    width: 280px;
+    font-size: 14px;
+    padding: 2px;
+    font-family: inherit;
+}
+
+input[type=password] {
+    width: 280px;
+    font-size: 14px;
+    padding: 2px;
+    font-family: inherit;
+}
+
+textarea {
+  width: 900px;
+  max-width: 900px; 
+  height: 400px;
+  font-size: 17px;
+  font-family: inherit;
+}
+
+input[type=submit] {
+	margin-top:20px;
+  	font-size: 17px;
+}
+
+
+.pageblock{
+	margin-top: 80px;
+	
+}
+

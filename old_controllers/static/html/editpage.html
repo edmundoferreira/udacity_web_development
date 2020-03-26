@@ -1,0 +1,39 @@
+{%  extends "base.html" %}
+
+
+{% block log %}
+	{% if logname==None: %}
+		<div class="edit-area">
+			<a class="edit-link" href="/_history{{url}}">history</a>
+		</div>
+		<div class="login-area">
+			<a class="login-link" href="/login">login</a>
+	  		|    
+			<a class="login-link" href="/signup">signup</a>
+		</div>
+		{% else: %}
+		<div class="edit-area">
+			<a class="edit-link" href="{{url}}">view</a>
+			|
+			<a class="edit-link" href="/_history{{url}}">history</a>
+		</div>
+		<div class="login-area">
+			{{logname}} (<a class="login-link" href="/logout">logout</a>)
+		</div>
+	{% endif %}
+{% endblock %}
+
+
+{% block page %}
+
+	<form method="post">
+		<div>
+			<textarea name="content">{{content}}</textarea>	
+		</div>
+		<div>
+			<input type="submit" value="Save">
+		</div>	
+	</form>	 
+	
+{% endblock %}
+
